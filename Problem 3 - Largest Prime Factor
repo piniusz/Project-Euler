@@ -1,0 +1,23 @@
+Problem 3 - Largest Prime Factor
+Aswer - 6857
+
+Python code to solve the problem:
+
+def trial_by_division(number):
+    num = number
+    i = 2
+    prime_factors = []
+    while num != 1:
+        val = str(float(num/i))
+        if val[-2:] == '.0':
+            num = num/i
+            if i not in prime_factors:
+                prime_factors.append(i)
+        else:
+            i += 1
+    return prime_factors
+        
+
+
+prime_factors = trial_by_division(600851475143)
+largest_Prime_Factor = max(prime_factors)
