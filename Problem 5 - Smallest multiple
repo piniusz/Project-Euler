@@ -1,0 +1,23 @@
+Problem 5 - Smallest multiple
+
+asnwer = 232792560
+
+
+python solution
+
+number = 0
+n = 0
+
+
+while n != 20:
+    n = 0
+    number += 20
+    for i in range(1,21):
+        value = number/i
+        if str(value)[-2:] == '.0':
+            n = n+1
+        else:
+            break
+
+answer = number
+            
