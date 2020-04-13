@@ -1,0 +1,26 @@
+Problem 7 - 10001st prime
+
+anserw = 104743
+
+
+Python solution:
+
+
+def prime_check(num):
+    for i in range(3,int(num/2) + 1,2):
+        value = num/i
+        if str(value)[-2:] == '.0':
+            return False
+    return True
+
+n = 0
+number = 1
+
+while n < 10000:
+    number += 2
+    if prime_check(number) == True:
+        n += 1
+
+
+
+anserw = number
