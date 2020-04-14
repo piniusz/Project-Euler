@@ -1,0 +1,19 @@
+Problem 9 - Largest product in a series
+
+Answer = 23514624000
+
+Python solution
+
+def biggest_product(series_len):
+    largest_product = 0
+    for i in range(0,len(str(digit)) - (series_len) + 1):
+        value = 1
+        for n in range(i, i+ series_len):
+            number = int(str(digit)[n])
+            value = value * number
+        if value > largest_product:
+            largest_product = value
+    return largest_product
+        
+
+Answer = biggest_product(13)
